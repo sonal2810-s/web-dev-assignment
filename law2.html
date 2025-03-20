@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWVq8RqD2B0AbHsoF12zMkpIVRxof46l8ANNCeS+NcAhh4E6nSYwS7M5yHh6zN9D" crossorigin="anonymous">
+    
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #1F1C2C, #928DAB); }
+            50% { background: linear-gradient(135deg, #928DAB, #1F1C2C); }
+            100% { background: linear-gradient(135deg, #1F1C2C, #928DAB); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 6s infinite alternate ease-in-out;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container-fluid {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .bookdetails details {
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .bookdetails details:hover {
+            transform: scale(1.05);
+        }
+
+        .bookdetails summary {
+            font-weight: bold;
+            color: #FFD700;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .bookdetails summary:hover {
+            color: #FFC107;
+        }
+
+        .feedback {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #FFC107;
+            transform: scale(1.05);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            background: white;
+        }
+        .text-end{
+            display: flex;
+    justify-content: flex-end;
+        }
+        .text-end a {
+            text-decoration: none;
+            color: white;
+            background: #FFD700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            align-items:end ;
+        }
+
+        .text-end a:hover {
+            background: #FFC107;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #222;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container-fluid {
+                width: 90%;
+            }
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 20px;
+            }
+            .container-fluid {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class=" text-end p-2">
+        <a href="index.html">Home</a>
+    </div>
+    
+    <section class="container-fluid">
+        <h2>BOOK 1: THE LAWS OF HUMAN NATURE</h2>
+        <img src="https://img1.od-cdn.com/ImageType-100/1191-1/%7BC214BAC4-6723-4C7F-ACD2-37D4682CB121%7DImg100.jpg" alt="law" width="200" height="300">
+        <div class="bookdetails">
+            <details>
+                <summary>Genre</summary>
+                <ul><li>Psychology</li><li>Self-help</li></ul>
+            </details>
+            <details>
+                <summary>Index page</summary>
+                <ul>
+                    <li>Introduction</li>
+                    <li>Chapter 1: The Law of Irrationality</li>
+                    <li>Chapter 2: The Law of Narcissism</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Author</summary>
+                <p>Robert Greene</p>
+            </details>
+            <details>
+                <summary>Overview</summary>
+                <p>This book delves into psychological laws governing human behavior and interactions.</p>
+            </details>
+            <details>
+                <summary>Purchase links</summary>
+                <p><a href="https://amzn.in/d/dENwNfn" target="_blank">Amazon</a></p>
+                <p><a href="https://dl.flipkart.com/s/3g063TNNNN" target="_blank">Flipkart</a></p>
+            </details>
+        </div>
+        <h3>Feedback Form</h3>
+        <div class="feedback">
+            <form>
+                <label><strong>Name:</strong></label>
+                <input type="text" id="name">
+                <label><strong>Feedback:</strong></label>
+                <input type="text" id="feedback">
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    <footer>&copy; 2025 Book Showcase | All rights reserved</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
